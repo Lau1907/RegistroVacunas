@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { DuenoService } from './dueno.service';
+import { PropietarioService } from './propietario.service';
 
-describe('DuenoService', () => {
-  let service: DuenoService;
+describe('PropietarioService', () => {
+  let service: PropietarioService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(DuenoService);
+    service = TestBed.inject(PropietarioService);
   });
 
   it('should be created', () => {

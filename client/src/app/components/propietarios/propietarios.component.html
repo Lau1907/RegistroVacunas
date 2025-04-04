@@ -1,0 +1,12 @@
+<div class="container">
+    <h2>Lista de Propietarios</h2>
+    <input type="text" placeholder="Buscar propietario..." class="search-bar">
+    <button class="add-button">Agregar Propietario</button>
+    <ul class="list">
+        <li *ngFor="let propietario of propietarios">
+            <span>{{ propietario.nombre }} {{ propietario.ApeP }} {{ propietario.ApeM }}</span>
+            <button class="edit-button">Editar</button>
+            <button class="delete-button">Eliminar</button>
+        </li>
+    </ul>
+</div>

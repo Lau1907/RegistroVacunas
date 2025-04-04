@@ -5,28 +5,28 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class VacunasService {
-  private apiUrl = 'http://localhost:3000/vacunas';
+export class PropietariosService {
+  private apiUrl = 'http://localhost:3000/propietarios';
 
   constructor(private http: HttpClient) {}
 
-  getVacunas(): Observable<any> {
+  getPropietarios(): Observable<any> {
     return this.http.get<any>(this.apiUrl);
   }
 
-  getVacunaById(id: string): Observable<any> {
+  getPropietarioById(id: string): Observable<any> {
     return this.http.get<any>(`${this.apiUrl}/${id}`);
   }
 
-  createVacuna(data: any): Observable<any> {
+  createPropietario(data: any): Observable<any> {
     return this.http.post<any>(this.apiUrl, data);
   }
 
-  updateVacuna(id: string, data: any): Observable<any> {
+  updatePropietario(id: string, data: any): Observable<any> {
     return this.http.put<any>(`${this.apiUrl}/${id}`, data);
   }
 
-  deleteVacuna(id: string): Observable<any> {
+  deletePropietario(id: string): Observable<any> {
     return this.http.delete<any>(`${this.apiUrl}/${id}`);
   }
 }
