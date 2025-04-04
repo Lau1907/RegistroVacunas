@@ -1,1 +1,32 @@
-<p>formulario-vacuna works!</p>
+<div class="vacuna-form">
+    <h2>Registrar Nueva Vacuna</h2>
+    <form [formGroup]="vacunaForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="nombre">Nombre</label>
+        <input id="nombre" formControlName="nombre" type="text" />
+      </div>
+  
+      <div>
+        <label for="descripcion">Descripción</label>
+        <textarea id="descripcion" formControlName="descripcion"></textarea>
+      </div>
+  
+      <div>
+        <label for="fecha">Fecha</label>
+        <input id="fecha" formControlName="fecha" type="date" />
+      </div>
+  
+      <div>
+        <label for="dosis_recomendadas">Dosis Recomendadas</label>
+        <input id="dosis_recomendadas" formControlName="dosis_recomendadas" type="text" placeholder="Separar por comas" />
+      </div>
+  
+      <div>
+        <label for="especies_aplicables">Especies Aplicables</label>
+        <input id="especies_aplicables" formControlName="especies_aplicables" type="text" placeholder="Separar por comas" />
+      </div>
+  
+      <button type="submit" [disabled]="vacunaForm.invalid">Registrar Vacuna</button>
+    </form>
+  </div>
+  
